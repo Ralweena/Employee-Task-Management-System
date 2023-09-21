@@ -1,0 +1,80 @@
+* {
+    border: none;
+    outline: none;
+}
+:root {
+    --dark-blue : #1687a7;
+    --light-blue : #e3f6f5;
+    --blue : #104655;
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+}
+
+/* ----- Login Form ---- */
+
+.container {
+    display: flex;
+    width: 800px;
+    margin: 50px auto;
+    height: 480px;
+    border: 2px solid var(--dark-blue);
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px var(--blue);
+    padding-left: 0;
+    
+}
+.container .col1 {
+    float: left;
+    width: 350px;
+    text-align: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+}
+.container .col2 {
+    width: 430px;
+    padding: 20px;
+    text-align: center;
+}
+.container .col2 div {
+    margin: 35px 25px;
+    border-radius: 10px;
+}
+.container .col2 p {
+    margin-top: 27px;
+}
+input[type="email"], input[type="password"] {
+    font-size: 18px;
+    padding: 5px;
+    background-color: var(--light-blue);
+    border-bottom: 2px solid var(--dark-blue);
+    color: var();
+}
+input[type="email"]:focus, input[type="password"]:focus {
+    border-bottom: 3px solid var(--blue) !important ;
+} 
+.col2 span i {
+    font-size: 22px;
+    margin-right: 5px;
+}
+input[type="submit"] {
+    border-radius: 10px;
+    padding: 7px 60px;
+    font-size: 19px;
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+}
+input[type="submit"]:hover {
+    background-color: var(--blue);
+    box-shadow: 0px 0px 5px var(--blue);
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+a:hover {
+    color: var(--blue);
+}

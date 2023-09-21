@@ -1,0 +1,84 @@
+/* ------- Navigation Bar ------- */
+.navigation {
+	position: fixed;
+	width: 300px;
+	height: 100%;
+	background-color: var(--dark-blue);
+	color: var(--light-blue);
+	transition: 0.5s;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+.navigation.active {
+	width: 80px;
+}
+.navigation.active ul li span.title {
+	display: none;
+}
+.navigation ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.navigation ul li {
+	position: relative;
+	width: 100%;
+	padding: 15px 0 15px 5px;
+}
+.navigation ul li:nth-child(1) {
+	margin: 10px 0 20px;
+	pointer-events: none;
+}
+.navigation ul li:nth-child(1) a {
+	color: var(--light-blue);
+	font-size: 22px;
+}
+.navigation ul li a {
+	display: block;
+	width: 100%;
+	display: flex;
+	color: var(--light-blue);
+}
+.navigation ul li a img {
+	display: block;
+	width: 35px;
+	color: var(--light-blue);
+	text-align: start;
+	margin-left: -10px;
+}
+.navigation ul li a .icon {
+	position: relative;
+	min-width: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+.navigation ul li a .icon i {
+	font-size: 22px;
+	padding: 0 10px;
+	display: block;
+	text-align: start;
+	margin-left: -10px;
+}
+.navigation ul li:hover {
+	background-color: var(--white);
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.navigation ul li:hover a{
+	color: var(--blue);
+	font-weight: 600;
+}
+.navigation ul li:hover a::before {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: -50px;
+	width: 50px;
+	height: 50px;
+	border-radius: 40%;
+	background: transparent;
+	box-shadow: 35px 35px 0px 10px var(--white);
+	pointer-events: none;
+}
