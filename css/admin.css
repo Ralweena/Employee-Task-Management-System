@@ -1,0 +1,252 @@
+/* -------- Custom CSS -------- */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+:root {
+    --dark-blue : #1687a7;
+    --light-blue : #e3f6f5;
+    --blue : #104655;
+	--white : #f3f3f3;
+}
+body {
+    width: 100%;
+	overflow-x: hidden;
+	min-height: 100vh;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ul {
+	list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--light-blue);
+}
+
+@media only screen and (min-width: 1400px) {
+	a {
+		font-size: 14px;
+	}
+}
+
+/* ------ Container ------*/
+.container{
+    width: 100%;
+}
+
+/* ------ Main ------- */
+.main {
+    position: absolute;
+    top: 0;
+    width: calc(100% - 300px);
+    height: 100%;
+    left: 300px;
+    transition: 0.5s;
+    background-color: var(--white);
+    overflow-y: scroll;
+}
+.main.active {
+    width: calc(100% - 80px); 
+    left: 80px;
+}
+
+/* ------ Dashboard ------- */
+#dashboard .cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 60px;
+    margin-top: 30px;
+    background-color: var(--white);
+}
+#dashboard .cardBox .card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--light-blue);
+    padding: 30px 25px 20px 30px;
+    border-radius: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px var(--blue);
+    color: var(--blue);
+}
+#dashboard .cardBox .card .numbers {
+    font-weight: 400;
+    font-size: 22px;
+}
+#dashboard .cardBox .card .cardName {
+    margin-top: 5px;
+    font-size: 18px;
+}
+#dashboard .cardBox .card i {
+    font-size: 35px;
+}
+#dashboard .cardBox .card:hover {
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    font-weight: 700;
+    box-shadow: 0px 0px 10px var(--blue);
+}
+
+/* ------ For all Navigations of sidebar of both Admin and User------- */
+#employee .box, #department .box, 
+#task .box, #addEmployee .box,
+#addDepartment .box, #taskReport .box, #taskStatus .box,
+#editDepartment .box, #editEmployee .box, #editPassword .box,
+#newTask .box {
+    margin: 40px auto;
+    max-width: 900px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--blue);
+}
+.main.active #employee .box, .main.active #department .box,
+.main.active #task .box, .main.active #addEmployee .box,
+.main.active #addDepartment .box, .main.active #taskReport.box, .main.active #taskStatus.box,
+.main.active #editDepartment .box, .main.active #editEmployee .box,
+.main.active #taskReport .box,
+.main.active #newTask .box, .main.active #editPassword .box {
+    max-width: 1050px;
+} 
+.main.active #taskReport .box .innerBox {
+    max-width: 1000px;
+}
+
+/* ------ Department, Employee, Task Report and Task status------- */
+/* ------ New Task ------- */
+
+#employee .box .title, #department .box .title, 
+#taskReport .box .title, #taskStatus .box .title,
+#newTask .box .title {
+    display: flex;
+}
+#employee .box .title p, #department .box .title p, #task .box .title p,
+#taskReport .box .title p, #taskStatus .box .title p,
+#newTask .box .title p {
+    font-size: 21px;
+}
+#employee .box .title button, #department .box .title button,
+#taskReport .box .title button, #taskStatus .box .title button,
+#newTask .title button {
+    margin-left: 600px;
+}
+.main.active #employee .title button, .main.active #department .title button,
+.main.active #taskReport .title button, .main.active #taskStatus .title button,
+.main.active #newTask .title button {
+    margin-left: 700px;
+}
+#employee .box button, #department .box button,
+#taskReport .box button, #taskStatus .box button,
+#newTask .box button {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 15px;
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    border-radius: 15px;
+    font-size: 18px;
+    margin: 10px;
+}
+#employee .box button:hover, #department .box button:hover,
+#taskReport .box button:hover, #taskStatus .box button:hover,
+#newTask  .box button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+}
+#employee .box table, #department .box table,
+#taskReport .box table, #taskStatus .box table,
+#newTask  .box table {
+    height: auto;
+    box-shadow: 0px 0px 5px var(--blue);
+    background-color: #e3f6f599;
+    margin: 30px auto 50px;
+}
+#employee .box th, #employee .box td , #department .box th, #department .box td,
+#taskReport .box th, #taskReport .box td, #taskStatus .box th, #taskStatus .box td,
+#newTask .box td, #newTask .box th {
+    box-shadow: 0px 0px 2px var(--blue);
+    padding: 10px;
+} 
+#taskReport .box .innerBox {
+    padding: 20px 50px;
+    max-width: 850px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    color: var(--dark-blue);
+    box-shadow: inset 0px 0px 5px var(--blue);
+    border-radius: 30px;
+}
+
+/* ------ Add, Edit Department Form, Add, Edit Employee Form, Edit Password and Add Task Form------- */
+
+#task .title p, #addEmployee .title p, #addDepartment .title p,
+#editDepartment .title p, #editEmployee .title p, #editPassword .title p {
+    text-align: left;
+    padding-left: 35px;
+    font-size: 22px;
+}
+#task form, #addEmployee form, #addDepartment form,
+#editDepartment form, #editEmployee form, #editPassword form {
+    box-shadow: 0px 0px 5px var(--blue);
+    margin: 30px 30px 50px;
+    padding: 20px 70px;
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    text-align: left;
+}
+#task form input, #task form select, 
+#addEmployee form input, #addEmployee form select, 
+#addDepartment form input ,#editDepartment form input,
+#editEmployee form select, #editEmployee form input,
+#editPassword form input {
+    font-size: 14px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 2px var(--blue);
+    padding: 5px 15px;
+    margin-top: 10px;
+    color: var(--blue);
+}
+#task form p, #addEmployee form p, #addDepartment form p,
+#editDepartment form p, #editEmployee form p, #editPassword form p {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+#task form .submitBtn, #addEmployee form .submitBtn, #addDepartment form .submitBtn,
+#editDepartment form .submitBtn, #editEmployee form .submitBtn, #editPassword form .submitBtn {
+    margin: 30px calc(50% - 35px) 20px;
+}
+#task form button, #addEmployee form button, #addDepartment form button,
+#editDepartment form button, #editEmployee form button, #editPassword form button {
+    border-radius: 20px;
+    padding: 10px 30px;
+    box-shadow: 0px 0px 2px var(--blue);
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    font-size: 18px;
+}
+#task form button:hover, #addEmployee form button:hover, #addDepartment form button:hover,
+#editDepartment form button:hover, #editEmployee form button:hover, #editPassword form button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* ----- Task Status ----- */
+
+#taskStatus input[type="range"] {
+    background-color: var(--dark-blue) !important;
+    border-radius: 15px;
+    border: none;
+    pointer-events: none;
+}
